@@ -111,6 +111,8 @@ public class Options {
           binders[i] = binderClass.getDeclaredConstructor().newInstance();
           binders[i].init(binderPrefix, props);
         } catch (Exception ex) {
+          System.err.println("Caught exception:");
+          ex.printStackTrace();
           throw new RuntimeException("Error initializing binder " + bi, ex);
         }
       }
