@@ -44,8 +44,12 @@ public class JollyDayHolidays implements Env.Binder {
     managerProps.setProperty("manager.impl", "edu.stanford.nlp.time.JollyDayHolidays$MyXMLManager");
     try {
       URL holidayXmlUrl;
+      System.err.println("xmlPath: " + xmlPath);
+      System.err.println("xmlPathType: " + xmlPathType);
+
       if (xmlPathType.equalsIgnoreCase("classpath")) {
         holidayXmlUrl = getClass().getClassLoader().getResource(xmlPath);
+        System.err.println("holidayXmlUrl as classpath: " + holidayXmlUrl);
       } else if (xmlPathType.equalsIgnoreCase("file")) {
         holidayXmlUrl = new URL("file:///" + xmlPath);
       } else if (xmlPathType.equalsIgnoreCase("url")) {
