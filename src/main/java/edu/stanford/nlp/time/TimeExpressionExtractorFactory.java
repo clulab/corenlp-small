@@ -57,7 +57,7 @@ public class TimeExpressionExtractorFactory implements Factory<TimeExpressionExt
   }
 
   public static TimeExpressionExtractor create(String className, String name, Properties props) {
-    // MIHAI CHANGE
+    // MIHAI CHANGE: removed unnecessary reflection
     // return ReflectionLoading.loadByReflection(className, name, props);
     return new edu.stanford.nlp.time.TimeExpressionExtractorImpl(name, props);
   }
