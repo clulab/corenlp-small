@@ -251,7 +251,7 @@ public class NERClassifierCombiner extends ClassifierCombiner<CoreLabel>  {
     return useSUTime && applyNumericClassifiers;
   }
 
-  private static <INN extends CoreMap> void copyAnswerFieldsToNERField(List<INN> l) {
+  public static <INN extends CoreMap> void copyAnswerFieldsToNERField(List<INN> l) {
     for (INN m: l) {
       m.set(CoreAnnotations.NamedEntityTagAnnotation.class, m.get(CoreAnnotations.AnswerAnnotation.class));
       Double labelProb = m.get(CoreAnnotations.AnswerProbAnnotation.class);
