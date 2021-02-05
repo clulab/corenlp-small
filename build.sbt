@@ -2,7 +2,7 @@ name := "corenlp-small"
 
 version := "1.0-SNAPSHOT"
 
-organization := "edu.stanford"
+organization := "org.clulab"
 
 scalaVersion := "2.12.6"
 crossScalaVersions := Seq("2.11.11", "2.12.6")
