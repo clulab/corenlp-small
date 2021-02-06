@@ -7,7 +7,11 @@ organization := "org.clulab"
 scalaVersion := "2.12.6"
 crossScalaVersions := Seq("2.11.11", "2.12.6")
 
+javacOptions ++= Seq("-encoding", "UTF-8")
+
 scalacOptions ++= Seq("-feature", "-unchecked", "-deprecation")
+
+publishArtifact in packageDoc := false
 
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.1" % "test",
